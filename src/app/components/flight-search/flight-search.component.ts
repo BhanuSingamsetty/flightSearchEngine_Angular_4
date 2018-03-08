@@ -17,7 +17,7 @@ export class FlightSearchComponent implements OnInit {
    destinationCity = '';
    roundTrip = false;
 
-  constructor (private httpService: HttpClient) {
+  constructor (public httpService: HttpClient) {
      this.data = [];
      this.flightData = [];
      this.refineFlightData = [];
@@ -34,7 +34,7 @@ export class FlightSearchComponent implements OnInit {
   }
 
    dateComparer(firstDate, secondDate) {
-      let x = new Date(secondDate);;
+      let x = new Date(secondDate);
 
       let dateString = x.getFullYear() + "-" +(x.getMonth() + 1) + "-" + x.getDate();
 
